@@ -1,0 +1,33 @@
+#activa archivos .SCSS
+Options +Includes
+AddType text/css .scss
+AddOutputFilter INCLUDES .scss
+
+#no listar directorios
+Options -Indexes
+#no listar archivos
+IndexIgnore *
+# asegurar htaccess
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+#control de acceso de origen
+#Header add Access-Control-Allow-Origin
+# asterisco indica que cualquier dominio puede hacer peticiones a mi server
+#"*"		# "http://www.example.com" determina q este dominio puede hacer peticiones
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(.+)$ index.php?ruta=$1 [QSA,L]
+
+#4 horas para que caduque la sesion php
+#php_value session.gc_maxlifetime 21600 
+#php_value session.cookie_lifetime 21600
+
+

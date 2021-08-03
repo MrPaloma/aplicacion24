@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="{BASE_URL}public/css/estilo.css" rel="stylesheet">
+    </head>
+    <body>
+        <table class="tablareceipt">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>{R_SOCIAL_E}</p>
+                        <img class="logofactura" src="{LOGO}">
+                        <p style="text-transform: none !important;">{R_DIRECCION_E}</p>
+                        <p style="text-transform: none !important;"><img src="{BASE_URL}public/img/telephone.png" style="width: 12px;" /> {R_TELEFONO_E}</p>
+                        <p style="text-transform: none !important;"><img src="{BASE_URL}public/img/email.png" style="width: 12px;" /> Email: {R_EMAIL_E}</p>
+                    </td>
+                    <td class="datoruc">
+                        <p>COTIZACION</p>
+                        <p>{NUM_DOC}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="tabladatos" >
+            <tbody>
+                <tr>
+                    
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">{TIPO_DOC_C}:</span>
+                            <div style="margin-left: 105px; border-bottom: solid 1px #000;">{NUM_DOC_C}</div>
+                        </div>
+                    </td>
+                    <td class="tdatoslabel tdatodlabeldos">
+                        <div>
+                            <span style="float: left;">Fecha</span>
+                            <div style="margin-left: 118px; border-bottom: solid 1px #000;">{FECHA_EMISION}</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Nombre Cliente:</span>
+                            <div style="margin-left: 105px; border-bottom: solid 1px #000;"> {R_SOCIAL_C} </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tablageneral">        
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr class="titulotable">
+                        <td style="text-align: center">Descripción</td>
+                        <td class="cantidadtabla" style="text-align: center">Cantidad</td>
+                        <td class="preciotabla" style="text-align: center">Precio Unitario</td>
+                        <td class="preciotabla ulttable" style="text-align: center">Total</td>
+                    </tr>
+                    {DETAIL}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tablageneral tablacostos tablaboleta">        
+            <table cellpadding="0" cellspacing="0">
+                <tbody>   
+                    <tr class="detalletable">    
+                        <td colspan="2"></td>
+                        <td class="preciotabla fintabla fintabla fintablados"><b>TOTAL</b></td>
+                        <td class="preciotabla ulttable fintabla" style="text-align:right">{TOTAL}</td>
+                    </tr>  
+                </tbody>
+            </table>        
+        </div>
+        <br/>
+        <div>        
+            {OBS} 
+        </div>
+        <br/><br/><br/>
+        <hr/>
+        <div class="tablageneral">        
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr class="titulotable">
+                        <td style="text-align: center">BANCO</td>
+                        <td style="text-align: center">NUMERO DE CUENTA BANCARIA</td>
+                    </tr>
+                    {CUENTAS}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,193 @@
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="<?php echo BASE_URL; ?>public/js/browser/browser.js"></script>
+<script src="<?php echo BASE_URL; ?>public/js/bootstrap/js/popper.min.js"></script>
+<script src="<?php echo BASE_URL; ?>public/js/bootstrap/js/bootstrap.js"></script>
+<script src="<?php echo BASE_URL; ?>public/js/notification/SmartNotification.min.js"></script>
+<script src="<?php echo $rutaLayout['js']; ?>plugins/masked-input/jquery.maskedinput.min.js"></script>
+<script src="<?php echo $rutaLayout['js']; ?>smartwidgets/jarvis.widget.min.js"></script>
+<script src="<?php echo BASE_URL; ?>public/js/jquery-idleTimeout/store.min.js"></script>
+<script src="<?php echo BASE_URL; ?>public/js/jquery-idleTimeout/jquery-idleTimeout.js"></script>
+<script src="<?php echo BASE_URL; ?>public/js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+<script src="<?php echo BASE_URL; ?>config/$$/$$.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>vendor/core/Obj.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>vendor/core/Exe.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>vendor/core/Resource.js?v=<?php echo $v ?>"></script>
+
+
+<script type="text/javascript">
+    var topmenu = !1;
+</script>
+
+<script src="<?php echo BASE_URL; ?>public/js/validate/jquery.validate.min.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>public/js/appButton.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo $rutaLayout['js']; ?>appMenu.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>public/js/appList.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>config/prefix/appBtn.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>config/!18n/lang_<?php echo Obj()->Vendor->Session->get('app_language') ?>.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>config/!18n/tour_<?php echo Obj()->Vendor->Session->get('app_language') ?>.js?v=<?php echo $v ?>"></script>
+<script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/accounting/accounting.js?v=<?php echo $v?>" ></script> 
+<script src="<?php echo BASE_URL; ?>vendor/core/Tools.js?v=<?php echo $v ?>"></script>
+<script type="text/javascript">
+
+    /*obtener el src de los js incluidos, para verificar que no sean suplantados*/
+    /*
+     $.each($('script'),function(){
+     alert($(this).attr('src'))
+     });
+     */
+    var APP_MSN = null;
+    var APP_ETIQUET = null;
+    var APP_TOUR = null;
+    var APP_CONTAINER_TABS = '_CONTAINER';
+    var APP_ROOT = '<?php echo BASE_URL; ?>';
+    var APP_MAIN_MODALS = '#cont-modal-sys';
+    localStorage.setItem('app_lang', '<?php echo Obj()->Vendor->Session->get('app_language') ?>');
+
+    $(document).ready(function () {
+
+        Tools.traslation('<?php echo Obj()->Vendor->Session->get('app_language') ?>');
+        Tools.getUserIP((ip) => localStorage.setItem('app_idLocal', ip));
+
+    });
+
+
+
+
+    /*
+     * Al final de la carga se limpia nmsp $$
+     * para evitar que los objetos sean instanciados fuera de Obj.
+     */
+    //setTimeout(function(){ $$ = null; },500); /*en mozilla necesita mas tiempo, terminar esta validacion despues*/
+
+</script>
+
+<script src="<?php echo BASE_URL; ?>libs/Aes/js/aes.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>libs/Aes/js/aesctr.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>libs/Aes/js/base64.js?v=<?php echo $v ?>"></script>
+<script src="<?php echo BASE_URL; ?>libs/Aes/js/utf8.js?v=<?php echo $v ?>"></script>
+
+
+<?php if (!Obj()->Vendor->Session->get('app_isLogin')) : ?>
+    <script src="<?php echo BASE_URL; ?>app/system/init/views/js/System.InitRsc.js?v=<?php echo $v ?>"></script>
+    <script type="text/javascript">
+        Obj.System = {};
+    </script>
+    <script src="<?php echo BASE_URL; ?>app/system/init/views/js/System.InitAx.js?v=<?php echo $v ?>"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            Obj.System.InitAx = new $$.System.InitAx();
+
+            Obj.System.InitAx.validaLogin();
+        });
+
+    </script>
+<?php else: ?>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/amcharts/amcharts.js" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/amcharts/serial.js" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/amcharts/plugins/export/export.min.js" ></script> 
+    
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/sparkline/jquery.sparkline.min.js" ></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/easy-pie-chart/jquery.easy-pie-chart.min.js" ></script>
+    <script src="<?php echo $rutaLayout['js']; ?>app.config.js?v=<?php echo $v?>"></script>
+    <script src="<?php echo $rutaLayout['js']; ?>demo.min.js?v=<?php echo $v?>"></script>
+    <script src="<?php echo $rutaLayout['js']; ?>app.min.js?v=<?php echo $v?>"></script>
+    <script src="<?php echo $rutaLayout['js']; ?>speech/voicecommand.min.js?v=<?php echo $v?>"></script>
+    <script src="<?php echo BASE_URL; ?>app/system/init/views/js/System.InitTour.js?v=<?php echo $v ?>"></script>
+    <script src="<?php echo BASE_URL; ?>app/system/init/views/js/System.InitRsc.js?v=<?php echo $v ?>"></script>
+    <script type="text/javascript">
+        Obj.System = {};
+    </script>
+    <script src="<?php echo BASE_URL; ?>app/system/init/views/js/System.InitAx.js?v=<?php echo $v ?>"></script>
+
+    <script type="text/javascript">
+        var APP_IDROL = '<?php echo Obj()->Vendor->Session->get('app_defaultIdRol') ?>';
+
+
+        /*
+         * agregando lista de roles
+         * @type undefined
+         */
+        var rols = <?php echo json_encode(Obj()->Vendor->Session->get('app_roles')) ?>;
+
+        var defaultNameRol = '<?php echo Obj()->Vendor->Session->get('app_defaultNameRol') ?>';
+        var liR = '', cssrol;
+        $.each(rols, function (i, v) {
+            cssrol = (v.nrol != defaultNameRol) ? 'arol' : '';
+            if (v.nrol != defaultNameRol) {
+                liR += `<li><a href="javascript:;" class="${cssrol}" data-k="${v.id_rol}"><i class="fa fa-bars"></i> ${Tools.traslate(v.nrol)}</a></li>`;
+            }
+        });
+        $('#ul-rols').html(liR);
+    //agregar rol por defecto
+        $('#sp-defaut-rol').html(Tools.traslate(defaultNameRol));
+
+        Obj.System.InitAx = new $$.System.InitAx();
+
+        Obj.System.InitAx.addEvtsPanelConfig();
+        $('._bandera').click(function () {
+            Obj.System.InitAx = new $$.System.InitAx();
+            Obj.System.InitAx.postChangeLanguage(this);
+        });
+        /*evento a los roles*/
+        $('.arol').click(function () {
+            Obj.System.InitAx = new $$.System.InitAx();
+            Obj.System.InitAx.postChangeRol($(this).data('k'));
+        });
+
+        //cuando el menu es top, estos eventos son para cerrar sesion y cambiar pass
+        $('.lv-out').click(function () {
+            let u = $(this).data('user');
+            Obj.System.InitAx = new $$.System.InitAx();
+            Obj.System.InitAx.logOut(u);
+        });
+        $('.lv-cp').click(function () {
+            alert('cambia pass');
+        });
+
+        //Obj.System.InitAx.inactividad();
+        $('#void_menu').appMenu({
+            data: <?php echo Obj()->Vendor->Session->get('app_menuUser') ?>
+        });
+        Obj.System.InitAx.formDashBoard();
+
+        $("#search-fld").autocomplete({
+            source: APP_MENU,
+            select: function (event, ui) {
+                let e = ui.item.evento.replace(')', `,'${ui.item.alias}','${ui.item.root}','${ui.item.title}')`);
+                e = e.replace('load', 'loadMenu');
+                eval(e);
+            }
+        });
+
+        //el configurador del theme solo esta activo para danilo y YO
+        let idUsuario = parseInt('<?php echo Obj()->Vendor->Session->get('app_idUsuario') ?>');
+        if ([1, 2].includes(idUsuario)) {
+            $('#demo-setting').parent('div.demo').removeClass('hide');
+        }
+
+
+    </script>
+    <!-- EXCEL FACTORY -->
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/excelFactory/js/require.min.js" ></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/excelFactory/js/underscore.min.js" ></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/excelFactory/excelFactory.js?v=<?php echo $v?>" ></script>
+
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/clockpicker/clockpicker.js" ></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/fullgrid/fullgrid.jquery.js?v=<?php echo $v?>" ></script>    
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/bootstraptour/bootstrap-tour.js" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/printElement/jquery.printElement.min.js?v=<?php echo $v ?>" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/ckeditor/ckeditor.js" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/chosen/chosen.jquery.js" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/dropzone/dropzone.js" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/jquery-upload/jquery.upload.js" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/treelst/treelst.js?v=<?php echo $v?>" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/numeroaletras/numeroALetras.js?v=<?php echo $v?>" ></script> 
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>public/js/media/media.js?v=<?php echo $v?>" ></script> 
+
+<?php endif; ?>  
+
+<script src="<?php echo BASE_URL; ?>public/js/pace/pace.min.js"></script>
+<script src="<?php echo BASE_URL; ?>app/facturacion/catalogo/views/js/custom.js"></script>
+
+</html>

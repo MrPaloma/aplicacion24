@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="{BASE_URL}public/css/estilo.css" rel="stylesheet">
+    </head>
+    <body>
+        <table class="tablareceipt">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>{R_SOCIAL_E}</p>
+                        <img class="logofactura" src="{LOGO}">
+                        <p style="text-transform: none !important;">{R_DIRECCION_E}</p>
+                        <p style="text-transform: none !important;"><img src="{BASE_URL}public/img/telephone.png" style="width: 12px;" /> {R_TELEFONO_E}</p>
+                        <p style="text-transform: none !important;"><img src="{BASE_URL}public/img/email.png" style="width: 12px;" /> Email: {R_EMAIL_E}</p>
+                    </td>
+                    <td class="datoruc">
+                        <p>R.U.C. {R_RUC_E}</p>                    
+                        <p>COMUNICACION DE BAJA</p>
+                        <p>{NUM_DOC}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tablageneral">        
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr class="titulotable">
+                        <td class="cantidadtabla" style="text-align: center !important">Fecha</td>
+                        <td style="text-align: center">Tipo Documento</td>
+                        <td class="preciotabla" style="text-align: center">Nro. Documento</td>
+                        <td class="preciotabla ulttable" style="text-align: center">Motivo</td>
+                    </tr>
+                    <tr class="detalletable"> 
+                        <td class="nombredetalle" style="text-align:center !important;width: 100px">{FECHA}</td>
+                        <td style="text-align:center">{T_DOC_AFEC}</td>
+                        <td style="text-align:center">{NUM_DOC_AFEC}</td>
+                        <td class="ulttable" style="width: 300px">{MOTIVO}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <table cellpadding="0" cellspacing="0" class="tablacan">
+            <tbody>
+                <tr>    
+                    <td style="text-align: center;">
+                        <img style="width: 124px; margin-bottom: 11px;" src="{QR}" />
+                    </td>                    
+                    <td>
+                        <div>Representación impresa de la Comunicación de Baja Electrónica.
+                            <!-- Consulte su documento electrónico en: --> <br /> 
+                            <span style="font-size: 10px;display: none">{LINK}</span>
+                        </div>
+                        {HASH}
+                    </td>
+                </tr>   
+            </tbody>
+        </table>
+
+    </body>
+</html>

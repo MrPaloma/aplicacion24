@@ -1,0 +1,74 @@
+.split-login-right {
+    display: none;
+  }
+  
+  .split-login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .split-login-footer {
+    padding-bottom: 2rem;
+  }
+  
+  .split-login-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .split-login {
+    background: #F2F5F8;
+    height: 100vh;
+    width: 100vw;
+    min-width: 400px;
+    min-height: 600px;
+  }
+  
+  .login-form {
+    padding: 10%;
+    padding-top: 20%;
+    height: 400px;
+    width: 400px;
+    background: #fafafa;
+    box-shadow: 0.5px 0.4px 2px 0.3px rgb(202, 202, 202);
+  }
+  .titulo {
+
+      text-align: center;
+      font-weight: bold;
+  }
+
+
+  body {
+    margin: 0;
+    font-family: BlinkMacSystemFont;
+    font-size: 1.8em;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  @media (min-width: 1024px) {
+    .split-login {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .split-login-right {
+      display: initial;
+      background: url('https://www.paginasamarillas.com.pe/dbimages/3041350/85578.jpg');
+      height: 100%;
+    }
+    
+    .split-login-half {
+      width: 50%;
+    }
+  }
+  

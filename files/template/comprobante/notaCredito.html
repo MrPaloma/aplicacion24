@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="{BASE_URL}public/css/estilo.css" rel="stylesheet">
+    </head>
+    <body>
+        <table class="tablareceipt">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>{R_SOCIAL_E}</p>
+                        <img class="logofactura" src="{LOGO}">
+                        <p style="text-transform: none !important;">{R_DIRECCION_E}</p>
+                        <p style="text-transform: none !important;"><img src="{BASE_URL}public/img/telephone.png" style="width: 12px;" /> {R_TELEFONO_E}</p>
+                        <p style="text-transform: none !important;"><img src="{BASE_URL}public/img/email.png" style="width: 12px;" /> Email: {R_EMAIL_E}</p>
+                    </td>
+                    <td class="datoruc">
+                        <p>R.U.C. {R_RUC_E}</p>                    
+                        <p>{NAME_DOC}</p>
+                        <p>{NUM_DOC}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="tabladatos">
+            <tbody>
+            	<tr>                	
+                    <td class="tdatoslabel" style="width: 50%; padding-right: 19px;">
+                        <div style="padding-bottom: 10px">
+                            <span style="float: left;">{TIPO_DOC_C}:</span>
+                            <div style="margin-left: 105px; border-bottom: dashed 1px #000 !important;">{NUM_DOC_C}</div>
+                        </div>
+                    </td>
+                    <td class="tdatoslabel tdatodlabeldos" rowspan="2">
+                        <div>
+                            <span style="float: left;"><b>DOCUMENTO QUE MODIFICA:</b></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>                	
+                    <td class="tdatoslabel" style="width: 50%; padding-right: 19px;">
+                        <div style="padding-bottom: 10px">
+                            <span style="float: left;">Nombre Cliente:</span>
+                            <div style="margin-left: 105px; border-bottom: dashed 1px #000 !important;">{R_RAZON_SOCIAL_C}</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="tabladatos">
+            <tbody>            
+                <tr>
+                    <td class="tdatoslabel" style="width: 50%; padding-right: 19px;">
+                        <div style="padding-bottom: 10px">
+                            <span style="float: left;">Dirección:</span>
+                            <div style="margin-left: 68px; border-bottom: dashed 1px #000 !important;"> {R_DIRECCION_C}</div>
+                        </div>
+                    </td>
+                    <td class="tdatoslabel tdatodlabeldos">
+                        <div>
+                            <span style="float: left;">Denominación: </span>
+                            <div style="margin-left: 118px; border-bottom: dashed 1px #000 !important;">{NAME_DOC_AFEC}</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdatoslabel" style="width: 50%; padding-right: 19px;">
+                        <div style="padding-bottom: 10px">
+                            <span style="float: left;">Fecha de Emisión:</span>
+                            <div style="margin-left: 115px; border-bottom: dashed 1px #000 !important;"> {FECHA_EMISION} </div>
+                        </div>
+                    </td>
+                    <td class="tdatoslabel tdatodlabeldos">
+                        <div>
+                            <span style="float: left;">N°: </span>
+                            <div style="margin-left: 25px; border-bottom: dashed 1px #000 !important;">{NUM_DOC_AFEC}</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdatoslabel tdatonombre tdatocre tdatocons"><p>Por los consiguiente:</p></td>
+                    <td class="tdatoslabel tdatofecha tdatocre"><p><span>Emisión del Comprobante de pago que modifica:</span></p> {FECHA_DOC_AFEC}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tablageneral">        
+            <table cellpadding="0" cellspacing="0">
+
+                <tbody>
+                    <tr class="titulotable">
+                        <td class="cantidadtabla">Cantidad</td>
+                        <td class="cantidadtabla">Código</td>
+                        <td>Descripción</td>
+                        <td class="preciotabla">Precio Unitario</td>
+                        <td class="preciotabla ulttable">Valor de venta o servicio prestado</td>
+                    </tr>
+                    {DETAIL}
+                </tbody>
+            </table>
+        </div>
+        <div class="tablageneral tablacostos">        
+            <table cellpadding="0" cellspacing="0">
+                <tbody>   
+                    <tr class="detalletable">                                                                
+                        <td rowspan="3" style="padding: 0px !important;">
+                            <b>SON:</b> {MONTO_LETRAS}
+                            <br/>
+                            <b>MOTIVO DE LA EMISIÓN DE LA NOTA DE CRÉDITO</b>
+                            <table style="width:100%">
+                                <tr>
+                                    <th style="font-weight: normal; font-size: 12px;">{TIPO_MOTIVO}</th>
+                                </tr>
+                                <tr>
+                                    <th style="font-weight: normal; font-size: 12px;">&nbsp;</th>
+                                </tr>
+                                <tr>
+                                    <th style="font-weight: normal; font-size: 12px;">&nbsp;</th>
+                                </tr>
+                                <tr>
+                                    <th style="font-weight: normal; font-size: 12px;">&nbsp;</th>
+                                </tr>
+                                <tr>
+                                    <th style="font-weight: normal; font-size: 12px;">&nbsp;</th>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="preciotabla fintabla fintablados"><b>SUB TOTAL</b></td>
+                        <td class="preciotabla ulttable fintabla" style="text-align: right">{SUB_TOTAL}</td>
+                    </tr> 
+                    <tr class="detalletable">
+                        <td class="preciotabla fintabla fintablados"><b>I.G.V.</b></td>
+                        <td class="preciotabla ulttable fintabla" style="text-align: right">{TOTAL_IGV}</td>
+                    </tr>   
+                    <tr class="detalletable">
+                        <td class="preciotabla fintabla fintabla fintablados"><b>TOTAL</b></td>
+                        <td class=" preciotabla ulttable fintabla" style="text-align: right">{TOTAL}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="width: 34%;text-align:center">                    
+                        <img style="width: 124px; margin-bottom: 11px;" src="{QR}" />
+                    </td>
+                    <td width="66%">
+                        Representación impresa de la Nota de Crédito. 
+                        <!-- Consulte su documento electrónico en: -->
+                        <span style="font-size: 10px;display: none">{LINK}</span><br/>
+                        {HASH}
+                    </td>
+                </tr>
+
+            </tbody>    
+        </table>
+
+    </body>
+</html>

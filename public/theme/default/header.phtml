@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <?php $v = 8; ?>
+        <title><?php echo APP_COMPANY; ?></title>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="author" content="Roger David Cotrina Cabanillas">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="og:url" content="http://demo.3vfact.com/">
+        <meta property="og:locale" content="es_ES">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Desarrollo de software Chimbote, Arquitectura Chimbote, Contabilidad Chimbote">
+        <meta property="og:description" content="Desarrollador de software, Chimbote, Perú, facturación electrónica Chimbote, facturación electrónica SUNAT, planos Chimbote, maquetas Chimbote, contabilidad Chimbote, declaraciones contables Chimbote, arquitectos en Chimbote">
+        <meta property="og:site_name" content="3VFACT">
+        <meta property="og:image" content="http://demo.3vfact.com/public/img/logo.png">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:description" content="Desarrollador de software, Chimbote, Perú, facturación electrónica Chimbote, facturación electrónica SUNAT, planos Chimbote, maquetas Chimbote, contabilidad Chimbote, declaraciones contables Chimbote, arquitectos en Chimbote">
+        <meta name="twitter:title" content="Desarrollo de software Chimbote">
+        <meta name="twitter:image" content="http://demo.3vfact.com/public/img/logo.png">
+        <meta property="DC.date.issued" content="2025-02-15T06:16:34-05:00">
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="<?php echo BASE_URL; ?>public/img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="<?php echo BASE_URL; ?>public/img/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?php echo BASE_URL; ?>public/img/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="<?php echo BASE_URL; ?>public/img/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?php echo BASE_URL; ?>public/img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="<?php echo BASE_URL; ?>public/img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="<?php echo BASE_URL; ?>public/img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="<?php echo BASE_URL; ?>public/img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo BASE_URL; ?>public/img/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo BASE_URL; ?>public/img/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo BASE_URL; ?>public/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="<?php echo BASE_URL; ?>public/img/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo BASE_URL; ?>public/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="<?php echo BASE_URL; ?>public/img/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="<?php echo BASE_URL; ?>public/img/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Specifying a Webpage Icon for Web Clip
+                 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+        <link rel="apple-touch-icon" href="<?php echo $rutaLayout['img']; ?>splash/sptouch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $rutaLayout['img']; ?>splash/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="<?php echo $rutaLayout['img']; ?>splash/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="<?php echo $rutaLayout['img']; ?>splash/touch-icon-ipad-retina.png">
+
+        <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!-- Startup image for web apps -->
+        <link rel="apple-touch-startup-image" href="<?php echo $rutaLayout['css']; ?>splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+        <link rel="apple-touch-startup-image" href="<?php echo $rutaLayout['css']; ?>splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+        <link rel="apple-touch-startup-image" href="<?php echo $rutaLayout['css']; ?>splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+
+
+
+
+
+
+        <link rel="stylesheet" href="<?php echo $rutaLayout['css']; ?>bootstrap.min.css" >
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/js/notification/SmartNotification.css" >
+
+        <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $rutaLayout['css']; ?>smartadmin-production-plugins.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $rutaLayout['css']; ?>smartadmin-production.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $rutaLayout['css']; ?>smartadmin-skins.min.css">
+
+        <!-- SmartAdmin RTL Support is under construction-->
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $rutaLayout['css']; ?>smartadmin-rtl.min.css">
+
+        <!-- SPINNERS -->
+        <link href="<?php echo $rutaLayout['css']; ?>plugins/textSpinners/spinners.css" rel="stylesheet">
+        <!-- ANIMATE -->
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $rutaLayout['css']; ?>animate.css">
+        <!-- TAGSINPUT -->
+        <link href="<?php echo BASE_URL; ?>public/js/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+        <!-- CHOSEN -->
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>public/js/chosen/chosen.css">
+        <!-- ARBOL -->
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>public/js/arbol/arbol.css">
+        <!-- autoCompleteTable -->
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo BASE_URL; ?>public/js/autoCompleteTable/autoCompleteTable.css">
+        <!-- FULLGRID -->
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/js/fullgrid/fullgrid.css" >
+        <!-- clockpicker -->
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/js/clockpicker/clockpicker.css" >
+        <!-- BOOTSTRAPTOUR -->
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/js/bootstraptour/bootstrap-tour.css" >
+        <!-- DROPZONE -->
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/js/dropzone/dropzone.css" >
+
+        <!-- TREELST -->
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/js/treelst/treelst.css" >
+        
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/js/amcharts/plugins/export/export.css" >
+
+        <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $rutaLayout['css']; ?>demo.min.css">
+
+        <!-- FONT AWESOME V.4.07 -->
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>public/css/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/css/style.css" >
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/css/generic.css?v=<?php echo $v ?>" >
+
+        <script src="<?php echo BASE_URL; ?>public/js/jquery/jquery.js"></script>
+        <script src="<?php echo BASE_URL; ?>public/js/jquery/jquery-ui.js"></script>
+    </head>
+    <?php
+    $encabezadoFijo = '';
+    $encabezadoFijoCheckbox = '';
+    $menuFijo = '';
+    $menuFijoCheckbox = '';
+    $navegacionFijo = '';
+    $navegacionFijoCheckbox = '';
+    $contenidoCentrado = '';
+    $contenidoCentradoCheckbox = '';
+    $htmlBackground = '';
+    $menuDrerecha = '';
+    $menuDrerechaCheckbox = '';
+    $menuArriba = '';
+    $menuArribaCheckbox = '';
+    $daltonicos = '';
+    $daltonicosCheckbox = '';
+    $template = 0;
+    $defectoIconCheck = '<i class="fa fa-check fa-fw" id="skin-checked"></i>';
+    $oscuroEleganteIconCheck = '';
+    $ulteraClaroIconCheck = '';
+    $anaranjadoIconCheck = '';
+    $pixelIconCheck = '';
+    $transparenteIconCheck = '';
+    $celesteIconCheck = '';
+
+    if (Obj()->Vendor->Session->get('app_isLogin')) :
+        $theme = Obj()->Vendor->Session->get('app_configThemeUser');
+        $encabezadoFijo = ($theme['encabezado_fijo']) ? 'fixed-header ' : '';
+        $encabezadoFijoCheckbox = ($theme['encabezado_fijo']) ? 'checked="true"' : '';
+        $menuFijo = ($theme['menu_fijo']) ? 'fixed-navigation ' : '';
+        $menuFijoCheckbox = ($theme['menu_fijo']) ? 'checked="true"' : '';
+        $navegacionFijo = ($theme['navegacion_fijo']) ? 'fixed-ribbon ' : '';
+        $navegacionFijoCheckbox = ($theme['navegacion_fijo']) ? 'checked="true"' : '';
+        $contenidoCentrado = ($theme['contenido_centrado']) ? 'container ' : '';
+        $contenidoCentradoCheckbox = ($theme['contenido_centrado']) ? 'checked="true"' : '';
+        $htmlBackground = (!empty($theme['html_background'])) ? $theme['html_background'] : '';
+        $menuDrerecha = ($theme['menu_derecha']) ? 'smart-rtl ' : '';
+        $menuDrerechaCheckbox = ($theme['menu_derecha']) ? 'checked="true"' : '';
+        $menuArriba = ($theme['menu_arriba']) ? 'menu-on-top ' : '';
+        $menuArribaCheckbox = ($theme['menu_arriba']) ? 'checked="true"' : '';
+        $daltonicos = ($theme['daltonicos']) ? 'colorblind-friendly ' : '';
+        $daltonicosCheckbox = ($theme['daltonicos']) ? 'checked="true"' : '';
+        if ($theme['theme_defecto']) {
+            $template = 0;
+            $defectoIconCheck = '<i class="fa fa-check fa-fw" id="skin-checked"></i>';
+            $oscuroEleganteIconCheck = '';
+            $ulteraClaroIconCheck = '';
+            $anaranjadoIconCheck = '';
+            $pixelIconCheck = '';
+            $transparenteIconCheck = '';
+            $celesteIconCheck = '';
+        }
+        if ($theme['theme_oscuro_elegante']) {
+            $template = 1;
+            $defectoIconCheck = '';
+            $oscuroEleganteIconCheck = '<i class="fa fa-check fa-fw" id="skin-checked"></i>';
+            $ulteraClaroIconCheck = '';
+            $anaranjadoIconCheck = '';
+            $pixelIconCheck = '';
+            $transparenteIconCheck = '';
+            $celesteIconCheck = '';
+        }
+        if ($theme['theme_ultera_claro']) {
+            $template = 2;
+            $defectoIconCheck = '';
+            $oscuroEleganteIconCheck = '';
+            $ulteraClaroIconCheck = '<i class="fa fa-check fa-fw" id="skin-checked"></i>';
+            $anaranjadoIconCheck = '';
+            $pixelIconCheck = '';
+            $transparenteIconCheck = '';
+            $celesteIconCheck = '';
+        }
+        if ($theme['theme_anaranjado']) {
+            $template = 3;
+            $defectoIconCheck = '';
+            $oscuroEleganteIconCheck = '';
+            $ulteraClaroIconCheck = '';
+            $anaranjadoIconCheck = '<i class="fa fa-check fa-fw" id="skin-checked"></i>';
+            $pixelIconCheck = '';
+            $transparenteIconCheck = '';
+            $celesteIconCheck = '';
+        }
+        if ($theme['theme_pixel']) {
+            $template = 4;
+            $defectoIconCheck = '';
+            $oscuroEleganteIconCheck = '';
+            $ulteraClaroIconCheck = '';
+            $anaranjadoIconCheck = '';
+            $pixelIconCheck = '<i class="fa fa-check fa-fw" id="skin-checked"></i>';
+            $transparenteIconCheck = '';
+            $celesteIconCheck = '';
+        }
+        if ($theme['theme_transparente']) {
+            $template = 5;
+            $defectoIconCheck = '';
+            $oscuroEleganteIconCheck = '';
+            $ulteraClaroIconCheck = '';
+            $anaranjadoIconCheck = '';
+            $pixelIconCheck = '';
+            $transparenteIconCheck = '<i class="fa fa-check fa-fw" id="skin-checked"></i>';
+            $celesteIconCheck = '';
+        }
+        if ($theme['theme_celeste']) {
+            $template = 6;
+            $defectoIconCheck = '';
+            $oscuroEleganteIconCheck = '';
+            $ulteraClaroIconCheck = '';
+            $anaranjadoIconCheck = '';
+            $pixelIconCheck = '';
+            $transparenteIconCheck = '';
+            $celesteIconCheck = '<i class="fa fa-check fa-fw" id="skin-checked"></i>';
+        }
+    endif;
+    ?>
+    <body class="<?php echo $encabezadoFijo . $menuFijo . $contenidoCentrado . $menuDrerecha . $menuArriba . $daltonicos ?> smart-style-<?php echo $template ?>">
+        <?php if (Obj()->Vendor->Session->get('app_isLogin')) : ?>
+            <header id="header" >
+                <div id="logo-group">
+                    <!-- PLACE YOUR LOGO HERE -->
+                    <a  href="<?php echo BASE_URL; ?>" >
+                        <span id="logo"> <img src="<?php echo $rutaLayout['img']; ?>logo-pale.png"> </span> 
+                    </a>
+                    <!-- END LOGO PLACEHOLDER -->
+
+                    <!-- Note: The activity badge color changes when clicked and resets the number to 0
+                        Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
+                    <span id="activity" class="activity-dropdown hide" style="position: absolute;"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span>
+
+                    <!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
+                    <div class="ajax-dropdown">
+                        <!-- the ID links are fetched via AJAX to the ajax container "ajax-notifications" -->
+                        <div class="btn-group btn-group-justified" data-toggle="buttons">
+                            <label class="btn btn-default">
+                                <input type="radio" name="activity" id="">
+                                Msgs (14) 
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="activity" id="">
+                                notify (3) 
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="activity" id="">
+                                Tasks (4) 
+                            </label>
+                        </div>
+
+
+
+                        <!-- notification content -->
+                        <div class="ajax-notifications custom-scroll">
+                            <div class="alert alert-transparent">
+                                <h4>Click a button to show messages here</h4>
+                                This blank page message helps protect your privacy, or you can show the first message here automatically.
+                            </div>
+
+                            <i class="fa fa-lock fa-4x fa-border"></i>
+                        </div>
+
+
+                        <!-- end notification content -->
+
+                        <!-- footer: refresh area -->
+                        <span> Last updated on: 12/12/2013 9:43AM
+                            <button type="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Loading..." class="btn btn-xs btn-default pull-right">
+                                <i class="fa fa-refresh"></i>
+                            </button> 
+                        </span>
+                        <!-- end footer -->
+
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="pull-left">
+                    <!-- multiple lang dropdown : find all flags in the flags page -->
+                    <ul id="ulLang" class="header-dropdown-list hidden-xs" >
+
+                        <li class="">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img src="img/blank.gif" class="<?php echo Obj()->Vendor->Session->get('app_languageFlag') ?>" >  </a>
+                            <ul class="dropdown-menu" style="min-width: 50px">
+                                <?php foreach (Obj()->Vendor->Session->get('app_idioms') as $value): ?>
+                                    <?php if ($value['language'] != Obj()->Vendor->Session->get('app_language')): ?>
+                                        <li>
+                                            <a href="javascript:void(0);" class="_bandera" data-lang="<?php echo $value['language'] ?>"><img src="img/blank.gif" class="<?php echo $value['bandera'] ?>"> <?php echo $value['descripcion'] ?></a>
+                                        </li>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- pulled right: nav area -->
+                <div class="pull-right">
+                    <!-- collapse menu button -->
+                    <div id="hide-menu" class="btn-header pull-right">
+                        <span> <a href="javascript:void(0);" title="Collapse Menu" data-action="toggleMenu"><i class="fa fa-reorder"></i></a> </span>
+                    </div>
+                    <!-- end collapse menu -->
+
+                    <!-- #MOBILE -->
+                    <!-- Top menu profile link : this shows only when top menu is active -->
+                    <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+                        <li class="">
+                            <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown"> 
+                                <img src="<?php echo $rutaLayout['img']; ?>/avatars/male.png" title="<?php echo Obj()->Vendor->Session->get('app_nameUser') ?>" class="online" />
+                            </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li>
+                                    <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="toggleShortcut"><i class="fa fa-arrow-down"></i> <span class="tr-language" data-tr="atajo"></span></a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="javascript:;" class="padding-10 padding-top-5 padding-bottom-5 lv-out" data-user="<?php echo Obj()->Vendor->Session->get('app_nameUser') ?>"><i class="fa fa-sign-out fa-lg"></i> <strong><span class="tr-language" data-tr="cerrar_session"></span></strong></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <!-- logout button -->
+                    <div id="logout" class="btn-header transparent pull-right">
+                        <span> <a href="javascript:;" class="lv-out tr-language-title" data-trtitle="cerrar_session" data-user="<?php echo Obj()->Vendor->Session->get('app_nameUser') ?>"><i class="fa fa-sign-out"></i></a> </span>
+                    </div>
+                    <!-- end logout button -->
+
+                    <!-- search mobile button (this is hidden till mobile view port) -->
+                    <div id="search-mobile" class="btn-header transparent pull-right">
+                        <span> <a href="javascript:void(0)" title="Search"><i class="fa fa-search"></i></a> </span>
+                    </div>
+                    <!-- end search mobile button -->
+
+
+                    <!-- input: search field -->
+                    <form action="" class="header-search pull-right">
+                        <input type="text" name="param" class="tr-language-ph" id="search-fld" data-trph="search_menu">
+                        <button type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+                    </form>
+                    <!-- end input: search field -->
+
+                    <!-- tour button -->
+                    <div class="btn-header transparent pull-right hidden-xs">
+                        <span> <a id="btnTour" href="javascript:void(0);" class="tr-language-title" data-trtitle="tour"><i class="fa fa-question-circle"></i></a> </span>
+                    </div>
+                    <!-- end tour button -->
+
+                    <!-- fullscreen button -->
+                    <div id="fullscreen" class="btn-header transparent pull-right">
+                        <span> <a id="lkFullScreen" href="javascript:void(0);" class="tr-language-title" data-trtitle="pantalla_full" data-action="launchFullscreen"><i class="fa fa-arrows-alt"></i></a> </span>
+                    </div>
+                    <!-- end fullscreen button -->
+
+
+
+                    <!-- #Voice Command: Start Speech -->
+                    <div id="speech-btn" class="btn-header transparent pull-right hidden-sm hidden-xs">
+                        <div> 
+                            <a href="javascript:void(0)" title="Voice Command" data-action="voiceCommand"><i class="fa fa-microphone"></i></a> 
+                            <div class="popover bottom"><div class="arrow"></div>
+                                <div class="popover-content">
+                                    <h4 class="vc-title">Voice command activated <br><small>Please speak clearly into the mic</small></h4>
+                                    <h4 class="vc-title-error text-center">
+                                        <i class="fa fa-microphone-slash"></i> Voice command failed
+                                        <br><small class="txt-color-red">Must <strong>"Allow"</strong> Microphone</small>
+                                        <br><small class="txt-color-red">Must have <strong>Internet Connection</strong></small>
+                                    </h4>
+                                    <a href="javascript:void(0);" class="btn btn-success" onclick="commands.help()">See Commands</a> 
+                                    <a href="javascript:void(0);" class="btn bg-color-purple txt-color-white" onclick="$('#speech-btn .popover').fadeOut(50);">Close Popup</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end voice command -->
+
+
+
+                    <ul id="ulRol" class="header-dropdown-list" >
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+                                <i class="fa fa-bars"></i> <span id="sp-defaut-rol" class="hidden-xs"></span> <i class="fa fa-angle-down"></i> 
+                            </a>
+                            <ul id="ul-rols" class="dropdown-menu pull-right">
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+                Note: These tiles are completely responsive,
+                you can add as many as you like
+            -->
+            <div id="shortcut">
+                <ul>                    
+<!--                    <li>
+                        <a href="#ajax/calendar.php" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
+                    </li>
+                    <li>
+                        <a href="#ajax/gmap-xml.php" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
+                    </li>
+                    <li>
+                        <a href="#ajax/invoice.php" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
+                    </li>
+                    <li>
+                        <a href="#ajax/gallery.php" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
+                    </li>-->
+                </ul>
+            </div>
+            <!-- END SHORTCUT AREA -->
+
+            <!-- Left panel : Navigation area -->
+            <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+            <aside id="left-panel">
+                <!-- User info -->
+                <div class="login-info">
+                    <span> <!-- User image size is adjusted inside CSS, it should stay as is -->
+
+                        <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                            <img src="<?php echo $rutaLayout['img']; ?>avatars/male.png" alt="me" class="online" />
+                            <span>
+                                <?php echo Obj()->Vendor->Session->get('app_nameUser') ?>
+                            </span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+
+                    </span>
+                </div>
+                <!-- end user info -->
+
+                <!-- NAVIGATION : This navigation is also responsive
+
+                To make this navigation dynamic please make sure to link the node
+                (the reference to the nav > ul) after page load. Or the navigation
+                will not initialize.
+                -->
+                <nav>
+                    <!-- NOTE: Notice the gaps after each icon usage <i></i>..
+                    Please note that these links work a bit different than
+                    traditional hre="" links. See documentation for details.
+                    -->
+
+                    <ul id="void_menu"></ul>
+                </nav>
+
+                <span class="minifyme" data-action="minifyMenu"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+
+            </aside>
+
+            <!-- END NAVIGATION --><!-- ==========================CONTENT STARTS HERE ========================== -->
+            <!-- MAIN PANEL -->
+            <div id="main" role="main">
+                <!-- RIBBON -->
+                <div id="ribbon">
+
+                    <!-- You can also add more buttons to the
+                    ribbon for further usability
+
+                    Example below:
+
+                    <span class="ribbon-button-alignment pull-right">
+                    <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+                    <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+                    <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+                    </span> -->
+
+                </div>
+
+                <!-- END RIBBON -->
+
+                <!-- #MAIN CONTENT -->
+                <div id="content-sys" style="margin-top: -5px;padding: 10px">
+                    <!-- CONTENEDOR DE LOS TABS GENERALES DE MODULOS -->
+                    <div id="cont-general-tabs-sys" style="background: #F4F6FA;border: 0px;">
+                        <ul id="cont-tabs-sys" style="border: 0px;">
+                        </ul>
+                        <div id="cont-main-sys" style="background: #ffffff;border-top: 1px solid #ddd"></div>
+                    </div>
+                    <!-- FIN CONTENEDOR DE LOS TABS GENERALES DE MODULOS -->
+                    <!--CONTENEDOR DE LOS MODALS-->
+                    <div id="cont-modal-sys"></div>
+                    <!--FIN CONTENEDOR DE LOS MODALS-->
+                </div>
+
+
+
+                <!-- END #MAIN CONTENT -->
+                <div id="process-general" onclick="$(this).fadeOut()">
+                    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+                </div> 
+                <!-- END MAIN CONTENT -->
+
+                <!-- INI CONFIG THEME -->
+                <div class="demo" style="display: none">
+                    <span id="demo-setting" style="padding-top: 6px;"><i class="fa fa-cogs fa-spin txt-color-blueDark"></i></span> 
+                    <form>
+                        <legend class="no-padding margin-bottom-10" style="font-size: 13px;"><b class="tr-language" data-tr="option_ap"></b></legend>
+                        <section>
+                            <label>
+                                <input name="subscription" id="smart-fixed-header" type="checkbox" class="checkbox style-0" value="1" <?php echo $encabezadoFijoCheckbox ?>>
+                                <span class="tr-language" data-tr="encabezado_fijo"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="terms" id="smart-fixed-navigation" class="checkbox style-0" value="1" <?php echo $menuFijoCheckbox ?>>
+                                <span class="tr-language" data-tr="menu_fijo"></span>
+                            </label>
+                            <!--                            <label>
+                                                            <input type="checkbox" name="terms" id="smart-fixed-ribbon" class="checkbox style-0" value="1">
+                                                            <span class="tr-language" data-tr="navegacion_fijo"></span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="terms" id="smart-fixed-footer" class="checkbox style-0" value="1">
+                                                            <span class="tr-language" data-tr="footer_fijo"></span>
+                                                        </label>-->
+                            <label>
+                                <input type="checkbox" name="terms" id="smart-fixed-container" class="checkbox style-0" value="1" <?php echo $contenidoCentradoCheckbox ?>>
+                                <span class="tr-language" data-tr="contenido_centrado"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="terms" id="smart-rtl" class="checkbox style-0" value="1" <?php echo $menuDrerechaCheckbox ?>>
+                                <span class="tr-language" data-tr="menu_derecha"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" id="smart-topmenu" class="checkbox style-0" value="1" <?php echo $menuArribaCheckbox ?>>
+                                <span class="tr-language" data-tr="menu_arriba"></span>
+                            </label> 
+                            <label>
+                                <input type="checkbox" id="colorblind-friendly" class="checkbox style-0" value="1" <?php echo $daltonicosCheckbox ?>>
+                                <span class="tr-language" data-tr="para_daltonicos"></span>
+                            </label>
+                            <span id="smart-bgimages" style="display: none">
+                                <h6 class='margin-top-10 semi-bold'>Background</h6>
+                                <img src='<?php echo $rutaLayout['img']; ?>pattern/graphy-xs.png' data-htmlbg-url='<?php echo $rutaLayout['img']; ?>pattern/graphy.png' width='22' height='22' class='margin-right-5 bordered cursor-pointer'>
+                                <img src='<?php echo $rutaLayout['img']; ?>pattern/tileable_wood_texture-xs.png' width='22' height='22' data-htmlbg-url='<?php echo $rutaLayout['img']; ?>pattern/tileable_wood_texture.png' class='margin-right-5 bordered cursor-pointer'>
+                                <img src='<?php echo $rutaLayout['img']; ?>pattern/sneaker_mesh_fabric-xs.png' width='22' height='22' data-htmlbg-url='<?php echo $rutaLayout['img']; ?>pattern/sneaker_mesh_fabric.png' class='margin-right-5 bordered cursor-pointer'>
+                                <img src='<?php echo $rutaLayout['img']; ?>pattern/nistri-xs.png' data-htmlbg-url='<?php echo $rutaLayout['img']; ?>pattern/nistri.png' width='22' height='22' class='margin-right-5 bordered cursor-pointer'>
+                                <img src='<?php echo $rutaLayout['img']; ?>pattern/paper-xs.png' data-htmlbg-url='<?php echo $rutaLayout['img']; ?>pattern/paper.png' width='22' height='22' class='bordered cursor-pointer'>
+                            </span>
+                        </section>
+                        <h6 class="margin-top-10 semi-bold margin-bottom-5 tr-language" data-tr="estilos"></h6>
+                        <section id="smart-styles">
+                            <a href="javascript:void(0);" id="smart-style-0" data-skinlogo="<?php echo $rutaLayout['img']; ?>logo.png" class="btn btn-block btn-xs txt-color-white margin-right-5" style="background-color:#4E463F;"><?php echo $defectoIconCheck ?> <span class="tr-language" data-tr="defecto"></span></a>
+                            <a href="javascript:void(0);" id="smart-style-1" data-skinlogo="<?php echo $rutaLayout['img']; ?>logo-white.png" class="btn btn-block btn-xs txt-color-white" style="background:#3A4558;"><?php echo $oscuroEleganteIconCheck ?> <span class="tr-language" data-tr="oscuro_elegante"></span></a>
+                            <a href="javascript:void(0);" id="smart-style-2" data-skinlogo="<?php echo $rutaLayout['img']; ?>logo-blue.png" class="btn btn-xs btn-block txt-color-darken margin-top-5" style="background:#fff;"><?php echo $ulteraClaroIconCheck ?> <span class="tr-language" data-tr="ultra_claro"></span></a>
+                            <a href="javascript:void(0);" id="smart-style-3" data-skinlogo="<?php echo $rutaLayout['img']; ?>logo-pale.png" class="btn btn-xs btn-block txt-color-white margin-top-5" style="background:#f78c40"><?php echo $anaranjadoIconCheck ?> <span class="tr-language" data-tr="anaranjado"></span></a>
+                            <a href="javascript:void(0);" id="smart-style-4" data-skinlogo="<?php echo $rutaLayout['img']; ?>logo-pale.png" class="btn btn-xs btn-block txt-color-white margin-top-5" style="background: #bbc0cf; border: 1px solid #59779E; color: #17273D !important;"><?php echo $pixelIconCheck ?> <span class="tr-language" data-tr="pixel"></span></a> 
+                            <a href="javascript:void(0);" id="smart-style-5" data-skinlogo="<?php echo $rutaLayout['img']; ?>logo-pale.png" class="btn btn-xs btn-block txt-color-white margin-top-5" style="background: rgba(153, 179, 204, 0.2); border: 1px solid rgba(121, 161, 221, 0.8); color: #17273D !important;"><?php echo $transparenteIconCheck ?> <span class="tr-language" data-tr="trasparente"></span></a>
+                            <a href="javascript:void(0);" id="smart-style-6" data-skinlogo="<?php echo $rutaLayout['img']; ?>logo-pale.png" class="btn btn-xs btn-block txt-color-white margin-top-6" style="background: #2196F3; border: 1px solid rgba(0, 0, 0, 0.3); color: #FFF !important;"><?php echo $celesteIconCheck ?> <span class="tr-language" data-tr="celeste"></span></a>
+                        </section>
+                        <?php if ($contenidoCentrado): ?>
+                            <script>
+                                $('#smart-bgimages').css({
+                                    display: 'inline'
+                                });
+                                $("#smart-bgimages img").bind("click", function () {
+                                    var a = $(this),
+                                            b = $("html");
+                                    var bgurl = a.data("htmlbg-url");
+                                    b.css("background-image", "url(" + bgurl + ")");
+                                    Obj.System.InitAx.appTheme(16, bgurl);
+                                });
+                            </script>
+                        <?php endif; ?>
+                        <?php if (!empty($htmlBackground)): ?>
+                            <script>
+                                $("html").css("background-image", "url(<?php echo $htmlBackground ?>)");
+                            </script>
+                        <?php endif; ?>
+                    </form> 
+                </div>
+                <!-- END CONFIG THEME -->
+            </div>
+            <!-- END MAIN PANEL -->
+
+        <?php endif; ?>
+

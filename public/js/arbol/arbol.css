@@ -1,0 +1,37 @@
+.arbol ul:not(.novertical) {
+/*    list-style-type: none;*/
+    background: url(img/linea_vertical.gif) repeat-y;
+}
+.arbol li {
+    /*padding: 0 10px;*/
+    cursor: pointer;
+}
+.arbol ul {
+    margin: 0px;
+    margin-left: 15px;
+    /*margin-left: 5px;*/
+}
+.arbol li {
+    background: url(img/nodo.gif) no-repeat;
+}
+.arbol li.cierre {
+    background: #FFF url(img/cierre.gif) left top no-repeat;
+}
+.arbol .novertical{
+    background: url(img/linea_vertical.gif) 4px repeat-y;
+}
+
+.arbol-plus-square{
+    background: url(img/plus.png);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-left: -2px;
+}
+.arbol-minus-square{
+    background: url(img/minus.png);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-left: -2px;
+}

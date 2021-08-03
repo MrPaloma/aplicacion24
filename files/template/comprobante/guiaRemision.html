@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="{BASE_URL}public/css/estilo.css" rel="stylesheet">
+    </head>
+    <body>
+        <table class="tablareceipt">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>{R_SOCIAL_E}</p>
+                        <img class="logofactura" src="{LOGO}">
+                        <p style="text-transform: none !important;">{R_DIRECCION_E}</p>
+                        <p style="text-transform: none !important;"><img src="{BASE_URL}public/img/telephone.png" style="width: 12px;" /> {R_TELEFONO_E}</p>
+                        <p style="text-transform: none !important;"><img src="{BASE_URL}public/img/email.png" style="width: 12px;" /> Email: {R_EMAIL_E}</p>
+                    </td>
+                    <td class="datoruc">
+                        <p>R.U.C. {R_RUC_E}</p>                    
+                        <p>{NAME_DOC}</p>
+                        <p>{NUM_DOC}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tablageneral">
+            <table>
+                <tr class="titulotable">
+                    <td colspan="2">Destinatario</td>
+                </tr>
+                <tr>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Razón Social:</span>
+                            <div style="margin-left: 105px; border-bottom: solid 1px #000;">{R_SOCIAL_D}</div>
+                        </div>
+                    </td>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">{TIPO_DOC_D}:</span>
+                            <div style="margin-left: 105px; border-bottom: solid 1px #000;">{NUM_DOC_D}</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>    
+                    <td class="tdatoslabel" colspan="2">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Dirección:</span>
+                            <div style="margin-left: 105px; border-bottom: solid 1px #000;">{DIRECCION_D}</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="tablageneral">
+            <table>
+                <tr class="titulotable">
+                    <td colspan="2">Envío</td>
+                </tr>
+                <tr>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Fecha de Traslado:</span>
+                            <div style="margin-left: 125px; border-bottom: solid 1px #000;">{FECHA_TRASLADO}</div>
+                        </div>
+                    </td>                    
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Modalidad de Traslado:</span>
+                            <div style="margin-left: 155px; border-bottom: solid 1px #000;">{MODALIDAD_TRASLADO}</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Motivo de Traslado:</span>
+                            <div style="margin-left: 125px; border-bottom: solid 1px #000;">{MOTIVO_TRASLADO}</div>
+                        </div>
+                    </td>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Numero de Bultos:</span>
+                            <div style="margin-left: 125px; border-bottom: solid 1px #000;">{NRO_BULTO}</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">P. Partida:</span>
+                            <div style="margin-left: 70px; border-bottom: solid 1px #000;">{PUNTO_PARTIDA}</div>
+                        </div>
+                    </td>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">P. Llegada:</span>
+                            <div style="margin-left: 70px; border-bottom: solid 1px #000;">{PUNTO_LLEGADA}</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="tablageneral">
+            <table>
+                <tr class="titulotable">
+                    <td colspan="2">Transporte</td>
+                </tr>
+                <tr>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Razón Social:</span>
+                            <div style="margin-left: 100px; border-bottom: solid 1px #000;">{R_SOCIAL_T}</div>
+                        </div>
+                    </td>                    
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">{TIPO_DOC_T}</span>
+                            <div style="margin-left: 100px; border-bottom: solid 1px #000;">{NUM_DOC_T}</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Vehículo:</span>
+                            <div style="margin-left: 100px; border-bottom: solid 1px #000;">{PLACA_TRASLADO}</div>
+                        </div>
+                    </td>
+                    <td class="tdatoslabel">
+                        <div style="padding-bottom: 10px; padding-right: 19px;">
+                            <span style="float: left;">Conductor:</span>
+                            <div style="margin-left: 100px; border-bottom: solid 1px #000;">{TIPO_DOC_C} {NUM_DOC_C}</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+        <div class="tablageneral">        
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr class="titulotable">
+                        <td class="cantidadtabla" style="text-align: center">Item</td>
+                        <td style="text-align: center">Descripción</td>
+                        <td style="text-align: center">Unidad</td>
+                        <td class="cantidadtabla" style="text-align: center">Cantidad</td>
+                    </tr>
+                    {DETAIL}
+                </tbody>
+            </table>
+        </div>
+
+        <table cellpadding="0" cellspacing="0" class="tablacan">
+            <tbody>
+                <tr>    
+                    <td style="vertical-align: top">
+                        {OBS}
+                        <!-- <img style="width: 124px; margin-bottom: 11px;" src="{QR}" /> -->
+                    </td>                    
+                    <td>
+                        <div>Representación impresa de la Guía de Remisión
+                            <!-- Consulte su documento electrónico en: --> <br /> 
+                            <span style="font-size: 10px; display: none">{LINK}</span>
+                        </div>
+                        {HASH}
+                    </td>
+                </tr>   
+            </tbody>
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,354 @@
+
+/*bread*/
+.lv-breadcrumb{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lv-breadcrumb{
+    overflow: hidden;
+    width: 100%;
+}
+
+.lv-breadcrumb li{
+    float: left;
+    margin: 0 .5em 0 1em;
+}
+.lv-disabled{
+    background: #eee !important;
+}
+.lv-breadcrumb a{
+    background: #fac11f;
+    padding: .7em 1em;
+    float: left;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(111,111,111,.5); 
+    position: relative;
+}
+
+.lv-breadcrumb a:hover{
+    background: orange;
+}
+
+.lv-breadcrumb a::before{
+    content: "";
+    position: absolute;
+    top: 50%; 
+    margin-top: -1.5em;   
+    border-width: 1.5em 0 1.5em 1em;
+    border-style: solid;
+    border-color: #fac11f transparent;
+    left: -1em;
+}
+
+.lv-breadcrumb a:hover::before{
+    border-color: orange transparent;
+}
+
+.lv-breadcrumb a::after{
+    content: "";
+    position: absolute;
+    top: 50%; 
+    margin-top: -1.5em;   
+    border-top: 1.5em solid transparent;
+    border-bottom: 1.5em solid transparent;
+    border-left: 1em solid #fac11f;
+    right: -1em;
+}
+
+.lv-breadcrumb a:hover::after{
+    border-left-color: orange;
+}
+
+.lv-breadcrumb .current,
+.lv-breadcrumb .current:hover{
+    font-weight: bold;
+    background: none;
+}
+
+.lv-breadcrumb .current::after,
+.lv-breadcrumb .current::before{
+    content: normal;
+}
+
+.lv-breadcrumb li:nth-last-child(1) a{
+    font-weight: bold;
+    background: #333;
+}
+.lv-breadcrumb li:nth-last-child(1) a::after{
+    border-left: 1em solid #333;
+}
+.lv-breadcrumb li:nth-last-child(1) a::before{
+    border-color: #333 transparent;
+}
+
+.lv-divider-bread{
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+
+#process-general{
+    position: fixed;
+    background:url(../img/overlay.png);
+    width: 100%;
+    height: 200%;
+    z-index: 999999999;
+    top:0px;
+    left: 0px;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+#process-general i{
+    position: absolute;
+    top:25%;
+}
+.color-spiner{
+    color: #18a689
+}
+/*fin bread*/
+
+label.error{
+    color: #990000 !important;
+}
+input.error{
+    border: 1px solid #990000 !important;
+}
+select.error{
+    border: 1px solid #990000 !important;
+}
+textarea.error{
+    border: 1px solid #990000 !important;
+}
+.mr5{
+    margin-left: 5px;
+}
+.lv-checkbox{
+    display: block;
+    margin-top: -7px;
+}
+.lv-requided{ /* when a field is considered invalid by the browser */
+    background: #fff url(../../public/img/required.png) no-repeat 98% center !important;
+    padding-right: 20px;
+}
+
+.lv-requided-require{
+    background: #F4C6C2 url(../../public/img/required.png) 4px 6px no-repeat !important;
+    width: 153px;
+    padding-left: 22px;
+    padding-top: 5px;
+    height: 23px;
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+    border: #E7ABA5 1px solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    float: left;
+    margin-top: 4px;
+}
+.lv-requided-require:before{
+    content: 'Campos Obligatorios';
+    color: #990000;
+}
+
+.lv-modalrequired{
+    background: #F4C6C2 url(../../public/img/required.png) 4px 6px no-repeat !important;
+    width: 153px;
+    padding-left: 22px;
+    padding-top: 5px;
+    height: 30px;
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+    border: #E7ABA5 1px solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    float: left;
+}
+.lv-modalrequired:before{
+    content: 'Campos Requeridos';
+    color: #990000;
+}
+/*styles datagrid
+table.lv-grid tr td.sorting_1 {
+    background-color: #F2F2F2 !important;
+}
+table.lv-grid tr td.sorting_2 {
+    background-color: #E6E6E6 !important;
+}*/
+table.lv-grid tr:hover {
+    background-color: orange !important;
+}
+.dataTables_paginate .activerd a, .dataTables_paginate .activerd a:hover{
+    background:#3276B1;
+    color: #ffffff;
+    border: 1px solid #3276B1;
+    cursor: default;
+}
+.move-cursor{
+    cursor: move;
+}
+.si-access{
+    border: 1px #00a300 solid;    
+    background: #D8F6CE;
+    float: right;
+}
+.no-access, .no-asign{
+    border: 1px #f00 solid;
+    background: #F6CED8;
+    float: left;
+}
+
+.no-access:before{
+    content: '';
+    border-top: 10px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 88px solid #f00;
+    border-left: 0px solid transparent;
+    left: -87px;
+    position: absolute;
+    top: 0px;
+}
+
+.si-access, .no-access,.no-asign{
+    width: 180px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 160px;
+}
+/*arbol*/
+.lv-arbol, .lv-arbol ul, .lv-arbol li {
+    position: relative;
+    margin-left: -10px;
+}
+
+.lv-arbol ul {
+    list-style: none;
+}
+
+.lv-arbol li::before, .lv-arbol li::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+}
+
+.lv-arbol li::before {
+    border-top: 1px dotted green;
+    top: 9px;
+    width: 8px;
+    height: 0;
+}
+
+.lv-arbol li::after {
+    border-left: 1px dotted brown;
+    height: 100%;
+    width: 0px;
+    top: 2px;
+}
+
+.lv-arbol ul > li:last-child::after {
+    height: 8px;
+}
+.ol_texto li{
+    margin-left: 20px;
+}
+.lv-pointer{
+    cursor: pointer;
+}
+.info_panel_circle{
+    margin-top: 3px;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+}
+.info_panel_circle_litle{
+    display: inline-block;
+    position: relative;
+    top:-7px;
+    height: 70px;
+    width: 35px;
+    left: -15px;
+    padding-top: 10px;
+}
+.info_panel_circle ._left{
+    border-radius: 50px 0 0 50px;
+}
+.info_panel_circle ._rigth{
+    border-radius: 0 50px 50px 0;
+}
+.info_panel_circle span{
+    font-size: 35px
+}
+
+.info_panel_circle_litle span{
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: -2px;
+    position: relative;
+    top: -2px;
+}
+.info_panel_circle_litle label{
+    position: absolute;
+    color: #000;
+    top: 24px;
+    left: 13px;
+    font-size: 8px;
+}
+.lv-progress progress{
+    width: 100%
+}
+.lv-progress .info{
+    position: absolute;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+}
+.lv-header-section{
+    background: #fff;
+    border:1px #00a300 solid;
+}
+.lv-header-section-info{
+    background: #fff;
+    border:1px #2980b9  solid;
+}
+.wh70{
+    width: 70px;
+    height: 70px;
+}
+.huge {
+    font-size: 25px;
+}
+.foot_a:hover{
+    color: orange !important;
+}
+
+/*=================TICKET====================*/
+.ticket_fae{
+    background: #333;
+    padding: 10px;
+    border:2px solid #000;
+}
+.ticket_fae .ticket_body{
+    margin: auto;
+    padding: 20px;
+}
+.ticket_body{
+    background: #fff;
+}
+.ticket_body table{
+    width: 100%;
+}
+.ticket_divider{
+    width:100%;
+    height: 5px;
+    border-top:1px dashed #000;
+    border-bottom:1px dashed #000;
+    border-right:0px dashed #000;
+    border-left:0px dashed #000;
+}

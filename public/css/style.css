@@ -1,0 +1,175 @@
+/* 
+    Created on : 27-oct-2017, 18:54:54
+    Author     : DC
+*/
+
+/*ERROR VALIDATE*/
+label.error{
+    color: #990000 !important;
+}
+input.error{
+    border: 1px solid #990000 !important;
+}
+select.error{
+    border: 1px solid #990000 !important;
+}
+
+  #customers {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: whitesmoke;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid rgb(73, 72, 72);
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #439946;
+    color: black;
+  }
+
+  #customers td {
+    color: black;
+  }
+
+
+
+  .customers2 {
+    background-color: transparent;
+    z-index: 500;
+    border-collapse: collapse;
+    width: 80%;
+    top: 65%;
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    
+  }
+  .customers2 table {
+    
+    border: 1px solid #356635;
+    box-shadow: 0.5px 0.4px 2px 0.3px rgb(151, 151, 151);
+
+  }
+  .customers2 td, .customers2 th {
+    border: 1px solid #356635;
+    padding: 8px;
+  }
+  
+  .customers2 tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .customers2 tr:hover {background-color: #ddd;}
+  
+  .customers2 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #8ac38b;
+    color: #356635;
+  }
+
+  .customers2 td {
+    color: black;
+    background-color: #f0f0f0;
+  }
+
+
+  .customers2 td, .customers2 th {
+    border: 1px solid rgb(73, 72, 72);
+    padding: 8px;
+  }
+
+  .customers2 button span{
+    font-size: xx-large;
+    color: black;
+  }
+
+
+  /* ESTILOS PARA LAS BUSQUEDAS DE VENTAS */
+
+  .ui-menu-item {
+    border: .5px solid gray;
+    color: rgb(57, 57, 59);
+    padding: 1px;
+  }
+
+  .ui-menu-item:hover {
+    border: .5px solid gray;
+    background-color: rgb(240, 240, 240);
+    color: black
+  }
+
+  .ui-menu-item-wrapper:hover {
+    border: .5px solid gray;
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-weight: bold;
+  }
+
+  .ui-menu {
+    width: 80%;
+  }
+
+  .ui-autocomplete-header {
+    background-color: #3276b1;
+    color: whitesmoke;
+    padding: 3px;
+  }
+  .ui-autocomplete-header:hover .ui-menu-item-wrapper:hover {
+    background-color: rgb(5, 86, 117);
+    color: #fff;
+  }
+
+  /* ESTILOS PARA EL MODAL DE GANANCIAS QUE APARECE EN COMPRAS */
+
+  #tabla-ganancias {
+    border: .5px solid #3276b1;
+    box-shadow: 0.5px 0.4px 2px 0.3px rgb(151, 151, 151);
+  }
+
+  #tabla-ganancias thead {
+    color: #fff;
+  }
+
+  #tabla-ganancias th {
+    padding: 1rem;
+    background-color: #3276b1;
+    text-align: center;
+  }
+
+  #tabla-ganancias td {
+    padding: 1rem;
+  }
+
+  #caja {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    position: absolute;
+}
+
+
+
+.btn-verde {
+  color: #fff;
+  background-color: #1ab394;
+  border-color: #1ab394;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
